@@ -7,41 +7,42 @@
 <title>ある日の午後 — 乙広モネ × EMU</title>
 <style>
 :root{--paper:#f1ece3;--ink:#1e1d1a;--soft:#8b857c}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}.app{position:fixed;inset:0;background:var(--paper);touch-action:manipulation;user-select:none}.page{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .28s ease}.page.active{opacity:1;pointer-events:auto}.cover,.ending{flex-direction:column;justify-content:space-between;padding:max(28px,env(safe-area-inset-top)) 24px max(28px,env(safe-area-inset-bottom));align-items:stretch}.kicker{font-size:10px;letter-spacing:.2em;color:var(--soft)}.cover-center{margin:auto 0}.cover h1{margin:0;font-family:"YuMincho","Hiragino Mincho ProN","Times New Roman",serif;font-size:clamp(45px,15vw,80px);font-weight:400;line-height:1.06;letter-spacing:.02em}.credit{margin-top:18px;font-size:12px;letter-spacing:.1em;color:#625d55}.hint{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.14em;color:var(--soft)}.photo{padding:max(18px,env(safe-area-inset-top)) 14px max(34px,env(safe-area-inset-bottom));}.photo img{display:block;max-width:100%;max-height:calc(100svh - 78px);width:auto;height:auto;object-fit:contain;box-shadow:0 0 0 1px rgba(0,0,0,.025)}.photo.edge{padding:0}.photo.edge img{width:100%;height:100%;max-width:none;max-height:none;object-fit:contain}.counter{position:fixed;z-index:20;right:16px;bottom:max(12px,env(safe-area-inset-bottom));font-size:9px;letter-spacing:.12em;color:rgba(40,38,34,.48);pointer-events:none}.tapzone{position:fixed;z-index:15;top:0;bottom:0;width:50%}.tapzone.prev{left:0}.tapzone.next{right:0}.ending{justify-content:center;align-items:center;text-align:center}.ending .line{width:42px;height:1px;background:var(--ink);margin-bottom:30px}.ending h2{font-family:"YuMincho","Hiragino Mincho ProN",serif;font-size:26px;font-weight:400;margin:0 0 16px}.ending p{font-size:10px;letter-spacing:.15em;color:var(--soft);margin:0}.ending .again{margin-top:44px;border:0;background:transparent;color:var(--soft);font-size:10px;letter-spacing:.12em;padding:12px}.quote{position:absolute;left:24px;bottom:max(28px,env(safe-area-inset-bottom));font-family:"YuMincho","Hiragino Mincho ProN",serif;font-size:13px;letter-spacing:.04em;color:rgba(30,29,26,.72);pointer-events:none}@media(min-width:760px){.photo{padding:28px 40px 40px}.photo img{max-height:calc(100vh - 80px)}.cover,.ending{padding-left:56px;padding-right:56px}.app{max-width:760px;left:50%;transform:translateX(-50%)}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;width:100%;height:100%;overflow:hidden!important;overscroll-behavior:none;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;position:fixed;inset:0;touch-action:none}
+.app{position:fixed;inset:0;background:var(--paper);user-select:none;overflow:hidden}
+.page{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .22s ease}
+.page.active{opacity:1;pointer-events:auto}
+.cover,.ending{flex-direction:column;justify-content:space-between;padding:max(28px,env(safe-area-inset-top)) 24px max(28px,env(safe-area-inset-bottom));align-items:stretch}
+.kicker{font-size:10px;letter-spacing:.2em;color:var(--soft)}
+.cover-center{margin:auto 0}.cover h1{margin:0;font-family:"YuMincho","Hiragino Mincho ProN","Times New Roman",serif;font-size:clamp(45px,15vw,80px);font-weight:400;line-height:1.06;letter-spacing:.02em}.credit{margin-top:18px;font-size:12px;letter-spacing:.1em;color:#625d55}.hint{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.14em;color:var(--soft)}
+.photo{padding:max(18px,env(safe-area-inset-top)) 14px max(34px,env(safe-area-inset-bottom))}.photo img{display:block;max-width:100%;max-height:calc(100svh - 78px);width:auto;height:auto;object-fit:contain}.photo.edge{padding:0}.photo.edge img{width:100%;height:100%;max-width:none;max-height:none;object-fit:contain}
+.counter{position:fixed;z-index:30;right:16px;bottom:max(12px,env(safe-area-inset-bottom));font-size:9px;letter-spacing:.12em;color:rgba(40,38,34,.48);pointer-events:none}.tapzone{position:fixed;z-index:25;top:0;bottom:0;width:50%}.tapzone.prev{left:0}.tapzone.next{right:0}
+.ending{justify-content:center;align-items:center;text-align:center}.ending .line{width:42px;height:1px;background:var(--ink);margin-bottom:30px}.ending h2{font-family:"YuMincho","Hiragino Mincho ProN",serif;font-size:26px;font-weight:400;margin:0 0 16px}.ending p{font-size:10px;letter-spacing:.15em;color:var(--soft);margin:0}.ending .again{position:relative;z-index:40;margin-top:44px;border:0;background:transparent;color:var(--soft);font-size:10px;letter-spacing:.12em;padding:12px}
+.quote{position:absolute;left:24px;bottom:max(28px,env(safe-area-inset-bottom));font-family:"YuMincho","Hiragino Mincho ProN",serif;font-size:13px;color:rgba(30,29,26,.72);pointer-events:none}
+@media(min-width:760px){.photo{padding:28px 40px 40px}.photo img{max-height:calc(100vh - 80px)}.cover,.ending{padding-left:56px;padding-right:56px}.app{max-width:760px;left:50%;transform:translateX(-50%)}}
 </style>
 </head>
 <body>
 <div class="app" id="app">
-  <section class="page cover active" data-type="cover">
-    <div class="kicker">A PHOTO STORY</div>
-    <div class="cover-center"><h1>ある日の午後</h1><div class="credit">乙広モネ × EMU</div></div>
-    <div class="hint"><span>2026</span><span>TAP TO OPEN</span></div>
-  </section>
-
-  <section class="page photo"><img src="assets/01_place.jpg" alt="喫茶店の入口"></section>
-  <section class="page photo edge"><img src="assets/02_street.jpg" alt="午後の街"></section>
-  <section class="page photo"><img src="assets/03_light.jpg" alt="テーブルに落ちる午後の光"><div class="quote">光が動くまで、そこにいた。</div></section>
-  <section class="page photo"><img src="assets/04_back.jpg" alt="窓を向く後ろ姿"></section>
-  <section class="page photo edge"><img src="assets/05_room.jpg" alt="喫茶店の窓辺"></section>
-  <section class="page photo"><img src="assets/06_window.jpg" alt="アーチ窓の横顔"></section>
-  <section class="page photo"><img src="assets/07_pause.jpg" alt="テーブルに伏せる姿"></section>
-  <section class="page photo"><img src="assets/08_close.jpg" alt="暖かな光の横顔"></section>
-  <section class="page photo"><img src="assets/09_end.jpg" alt="午後の終わり"></section>
-
-  <section class="page ending" data-type="ending">
-    <div class="line"></div><h2>ある日の午後</h2><p>OTSUHIRO MONE × EMU</p><button class="again" id="again">もう一度見る</button>
-  </section>
-
-  <div class="tapzone prev" id="prev" aria-label="前へ"></div><div class="tapzone next" id="next" aria-label="次へ"></div><div class="counter" id="counter">COVER</div>
+<section class="page cover active"><div class="kicker">A PHOTO STORY</div><div class="cover-center"><h1>ある日の午後</h1><div class="credit">乙広モネ × EMU</div></div><div class="hint"><span>2026</span><span>TAP TO OPEN</span></div></section>
+<section class="page photo"><img src="assets/01_place.jpg?v=3" alt="喫茶店の入口"></section>
+<section class="page photo edge"><img src="assets/02_street.jpg?v=3" alt="午後の街"></section>
+<section class="page photo"><img src="assets/03_light.jpg?v=3" alt="テーブルに落ちる午後の光"><div class="quote">光が動くまで、そこにいた。</div></section>
+<section class="page photo"><img src="assets/04_back.jpg?v=3" alt="窓を向く後ろ姿"></section>
+<section class="page photo edge"><img src="assets/05_room.jpg?v=3" alt="喫茶店の窓辺"></section>
+<section class="page photo"><img src="assets/06_window.jpg?v=3" alt="アーチ窓の横顔"></section>
+<section class="page photo"><img src="assets/07_pause.jpg?v=3" alt="テーブルに伏せる姿"></section>
+<section class="page photo"><img src="assets/08_close.jpg?v=3" alt="暖かな光の横顔"></section>
+<section class="page photo"><img src="assets/09_end.jpg?v=3" alt="午後の終わり"></section>
+<section class="page ending"><div class="line"></div><h2>ある日の午後</h2><p>OTSUHIRO MONE × EMU</p><button class="again" id="again">もう一度見る</button></section>
+<div class="tapzone prev" id="prev"></div><div class="tapzone next" id="next"></div><div class="counter" id="counter">COVER</div>
 </div>
 <script>
-const pages=[...document.querySelectorAll('.page')];let i=0;const counter=document.getElementById('counter');
-function show(n){i=Math.max(0,Math.min(n,pages.length-1));pages.forEach((p,j)=>p.classList.toggle('active',j===i));if(i===0)counter.textContent='COVER';else if(i===pages.length-1)counter.textContent='END';else counter.textContent=String(i).padStart(2,'0')+' / 09';}
-function next(){if(i<pages.length-1)show(i+1)}function prev(){if(i>0)show(i-1)}
-document.getElementById('next').addEventListener('click',next);document.getElementById('prev').addEventListener('click',prev);document.getElementById('again').addEventListener('click',e=>{e.stopPropagation();show(0)});
-addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' ')next();if(e.key==='ArrowLeft')prev()});
-let sx=0,sy=0;document.addEventListener('touchstart',e=>{const t=e.changedTouches[0];sx=t.clientX;sy=t.clientY},{passive:true});document.addEventListener('touchend',e=>{const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)){dx<0?next():prev()}},{passive:true});
-show(0);
+const pages=[...document.querySelectorAll('.page')],counter=document.getElementById('counter');let i=0;
+function show(n){i=Math.max(0,Math.min(n,pages.length-1));pages.forEach((p,j)=>p.classList.toggle('active',j===i));counter.textContent=i===0?'COVER':i===pages.length-1?'END':String(i).padStart(2,'0')+' / 09'}
+const next=()=>i<pages.length-1&&show(i+1),prev=()=>i>0&&show(i-1);
+document.getElementById('next').onclick=next;document.getElementById('prev').onclick=prev;document.getElementById('again').onclick=e=>{e.stopPropagation();show(0)};
+let sx=0,sy=0;document.addEventListener('touchstart',e=>{const t=e.changedTouches[0];sx=t.clientX;sy=t.clientY},{passive:false});document.addEventListener('touchmove',e=>e.preventDefault(),{passive:false});document.addEventListener('touchend',e=>{const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy))dx<0?next():prev()},{passive:false});
+window.addEventListener('wheel',e=>e.preventDefault(),{passive:false});show(0);
 </script>
-</body>
-</html>
+</body></html>
