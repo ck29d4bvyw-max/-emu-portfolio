@@ -2,50 +2,46 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
 <meta name="theme-color" content="#f1ece3">
 <title>ある日の午後 — 乙広モネ × EMU</title>
 <style>
-:root{--paper:#f1ece3;--ink:#1e1d1a;--soft:#8b857c;--rule:#d7d0c5}
-*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--paper)}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;-webkit-font-smoothing:antialiased}
-.cover{min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding:max(26px,env(safe-area-inset-top)) 22px max(28px,env(safe-area-inset-bottom));}
-.kicker{font-size:10px;letter-spacing:.18em;color:var(--soft)}
-.cover-center{padding:12vh 0 6vh}.cover h1{margin:0;font-family:"YuMincho","Hiragino Mincho ProN","Times New Roman",serif;font-size:clamp(44px,14vw,82px);font-weight:400;letter-spacing:.02em;line-height:1.08}.credit{margin-top:18px;font-size:12px;letter-spacing:.09em;color:#5f5a53}.cover-bottom{display:flex;justify-content:space-between;align-items:flex-end;font-size:10px;color:var(--soft);letter-spacing:.12em}.scroll{writing-mode:vertical-rl}
-.book{overflow:hidden}.spread{min-height:92svh;display:flex;align-items:center;justify-content:center;padding:10vh 0}.spread img{display:block;height:auto;object-fit:contain}.full{padding:0;min-height:auto}.full img{width:100%;max-height:none}.wide img{width:min(92vw,1180px)}.medium img{width:min(82vw,980px)}.narrow img{width:min(72vw,720px)}.small img{width:min(62vw,620px)}
-.pause{min-height:36svh;display:flex;align-items:center;justify-content:center;color:var(--soft);font-size:10px;letter-spacing:.25em}.chapter{min-height:46svh;display:flex;align-items:flex-end;padding:0 22px 8vh}.chapter p{font-family:"YuMincho","Hiragino Mincho ProN",serif;font-size:15px;line-height:2;color:#58534c;max-width:20em;margin:0}.end{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px 22px}.end .line{width:42px;height:1px;background:var(--ink);margin-bottom:32px}.end h2{font-family:"YuMincho","Hiragino Mincho ProN",serif;font-size:25px;font-weight:400;margin:0 0 18px}.end p{font-size:10px;letter-spacing:.14em;color:var(--soft);margin:0}.end a{margin-top:54px;color:var(--soft);font-size:10px;text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:4px}
-@media(min-width:780px){body{max-width:1100px;margin:0 auto}.cover{padding-left:56px;padding-right:56px}.chapter{padding-left:56px}.spread{min-height:100vh}.full img{width:100%}}
+:root{--paper:#f1ece3;--ink:#1e1d1a;--soft:#8b857c}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}.app{position:fixed;inset:0;background:var(--paper);touch-action:manipulation;user-select:none}.page{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .28s ease}.page.active{opacity:1;pointer-events:auto}.cover,.ending{flex-direction:column;justify-content:space-between;padding:max(28px,env(safe-area-inset-top)) 24px max(28px,env(safe-area-inset-bottom));align-items:stretch}.kicker{font-size:10px;letter-spacing:.2em;color:var(--soft)}.cover-center{margin:auto 0}.cover h1{margin:0;font-family:"YuMincho","Hiragino Mincho ProN","Times New Roman",serif;font-size:clamp(45px,15vw,80px);font-weight:400;line-height:1.06;letter-spacing:.02em}.credit{margin-top:18px;font-size:12px;letter-spacing:.1em;color:#625d55}.hint{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.14em;color:var(--soft)}.photo{padding:max(18px,env(safe-area-inset-top)) 14px max(34px,env(safe-area-inset-bottom));}.photo img{display:block;max-width:100%;max-height:calc(100svh - 78px);width:auto;height:auto;object-fit:contain;box-shadow:0 0 0 1px rgba(0,0,0,.025)}.photo.edge{padding:0}.photo.edge img{width:100%;height:100%;max-width:none;max-height:none;object-fit:contain}.counter{position:fixed;z-index:20;right:16px;bottom:max(12px,env(safe-area-inset-bottom));font-size:9px;letter-spacing:.12em;color:rgba(40,38,34,.48);pointer-events:none}.tapzone{position:fixed;z-index:15;top:0;bottom:0;width:50%}.tapzone.prev{left:0}.tapzone.next{right:0}.ending{justify-content:center;align-items:center;text-align:center}.ending .line{width:42px;height:1px;background:var(--ink);margin-bottom:30px}.ending h2{font-family:"YuMincho","Hiragino Mincho ProN",serif;font-size:26px;font-weight:400;margin:0 0 16px}.ending p{font-size:10px;letter-spacing:.15em;color:var(--soft);margin:0}.ending .again{margin-top:44px;border:0;background:transparent;color:var(--soft);font-size:10px;letter-spacing:.12em;padding:12px}.quote{position:absolute;left:24px;bottom:max(28px,env(safe-area-inset-bottom));font-family:"YuMincho","Hiragino Mincho ProN",serif;font-size:13px;letter-spacing:.04em;color:rgba(30,29,26,.72);pointer-events:none}@media(min-width:760px){.photo{padding:28px 40px 40px}.photo img{max-height:calc(100vh - 80px)}.cover,.ending{padding-left:56px;padding-right:56px}.app{max-width:760px;left:50%;transform:translateX(-50%)}}
 </style>
 </head>
 <body>
-<section class="cover">
-  <div class="kicker">A PHOTO STORY</div>
-  <div class="cover-center">
-    <h1>ある日の午後</h1>
-    <div class="credit">乙広モネ × EMU</div>
-  </div>
-  <div class="cover-bottom"><span>2026</span><span class="scroll">SCROLL</span></div>
-</section>
+<div class="app" id="app">
+  <section class="page cover active" data-type="cover">
+    <div class="kicker">A PHOTO STORY</div>
+    <div class="cover-center"><h1>ある日の午後</h1><div class="credit">乙広モネ × EMU</div></div>
+    <div class="hint"><span>2026</span><span>TAP TO OPEN</span></div>
+  </section>
 
-<main class="book">
-  <figure class="spread wide"><img src="assets/01_place.jpg" alt="喫茶店の入口"></figure>
-  <figure class="spread full"><img src="assets/02_street.jpg" alt="午後の街"></figure>
-  <div class="pause">AFTERNOON</div>
-  <figure class="spread medium"><img src="assets/03_light.jpg" alt="テーブルに落ちる午後の光"></figure>
-  <section class="chapter"><p>光が動くまで、そこにいた。</p></section>
-  <figure class="spread wide"><img src="assets/04_back.jpg" alt="窓を向く後ろ姿"></figure>
-  <figure class="spread full"><img src="assets/05_room.jpg" alt="喫茶店の窓辺"></figure>
-  <figure class="spread narrow"><img src="assets/06_window.jpg" alt="アーチ窓の横顔"></figure>
-  <div class="pause">TIME PASSES</div>
-  <figure class="spread wide"><img src="assets/07_pause.jpg" alt="テーブルに伏せる姿"></figure>
-  <figure class="spread medium"><img src="assets/08_close.jpg" alt="暖かな光の横顔"></figure>
-  <figure class="spread narrow"><img src="assets/09_end.jpg" alt="午後の終わり"></figure>
-</main>
+  <section class="page photo"><img src="assets/01_place.jpg" alt="喫茶店の入口"></section>
+  <section class="page photo edge"><img src="assets/02_street.jpg" alt="午後の街"></section>
+  <section class="page photo"><img src="assets/03_light.jpg" alt="テーブルに落ちる午後の光"><div class="quote">光が動くまで、そこにいた。</div></section>
+  <section class="page photo"><img src="assets/04_back.jpg" alt="窓を向く後ろ姿"></section>
+  <section class="page photo edge"><img src="assets/05_room.jpg" alt="喫茶店の窓辺"></section>
+  <section class="page photo"><img src="assets/06_window.jpg" alt="アーチ窓の横顔"></section>
+  <section class="page photo"><img src="assets/07_pause.jpg" alt="テーブルに伏せる姿"></section>
+  <section class="page photo"><img src="assets/08_close.jpg" alt="暖かな光の横顔"></section>
+  <section class="page photo"><img src="assets/09_end.jpg" alt="午後の終わり"></section>
 
-<section class="end">
-  <div class="line"></div>
-  <h2>ある日の午後</h2>
-  <p>OTSUHIRO MONE × EMU</p>
-  <a href="../">EMU PORTFOLIO</a>
-</section>
+  <section class="page ending" data-type="ending">
+    <div class="line"></div><h2>ある日の午後</h2><p>OTSUHIRO MONE × EMU</p><button class="again" id="again">もう一度見る</button>
+  </section>
+
+  <div class="tapzone prev" id="prev" aria-label="前へ"></div><div class="tapzone next" id="next" aria-label="次へ"></div><div class="counter" id="counter">COVER</div>
+</div>
+<script>
+const pages=[...document.querySelectorAll('.page')];let i=0;const counter=document.getElementById('counter');
+function show(n){i=Math.max(0,Math.min(n,pages.length-1));pages.forEach((p,j)=>p.classList.toggle('active',j===i));if(i===0)counter.textContent='COVER';else if(i===pages.length-1)counter.textContent='END';else counter.textContent=String(i).padStart(2,'0')+' / 09';}
+function next(){if(i<pages.length-1)show(i+1)}function prev(){if(i>0)show(i-1)}
+document.getElementById('next').addEventListener('click',next);document.getElementById('prev').addEventListener('click',prev);document.getElementById('again').addEventListener('click',e=>{e.stopPropagation();show(0)});
+addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' ')next();if(e.key==='ArrowLeft')prev()});
+let sx=0,sy=0;document.addEventListener('touchstart',e=>{const t=e.changedTouches[0];sx=t.clientX;sy=t.clientY},{passive:true});document.addEventListener('touchend',e=>{const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)){dx<0?next():prev()}},{passive:true});
+show(0);
+</script>
 </body>
 </html>
