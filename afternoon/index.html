@@ -25,21 +25,19 @@ html,body{margin:0;width:100%;height:100%;overflow:hidden!important;overscroll-b
 <body>
 <div class="app" id="app">
 <section class="page cover active"><div class="kicker">A PHOTO STORY</div><div class="cover-center"><h1>ある日の午後</h1><div class="credit">乙広モネ × EMU</div></div><div class="hint"><span>2026</span><span>TAP TO OPEN</span></div></section>
-<section class="page photo"><img src="assets/01_place.jpg?v=3" alt="喫茶店の入口"></section>
-<section class="page photo edge"><img src="assets/02_street.jpg?v=3" alt="午後の街"></section>
-<section class="page photo"><img src="assets/03_light.jpg?v=3" alt="テーブルに落ちる午後の光"><div class="quote">光が動くまで、そこにいた。</div></section>
-<section class="page photo"><img src="assets/04_back.jpg?v=3" alt="窓を向く後ろ姿"></section>
-<section class="page photo edge"><img src="assets/05_room.jpg?v=3" alt="喫茶店の窓辺"></section>
-<section class="page photo"><img src="assets/06_window.jpg?v=3" alt="アーチ窓の横顔"></section>
-<section class="page photo"><img src="assets/07_pause.jpg?v=3" alt="テーブルに伏せる姿"></section>
-<section class="page photo"><img src="assets/08_close.jpg?v=3" alt="暖かな光の横顔"></section>
-<section class="page photo"><img src="assets/09_end.jpg?v=3" alt="午後の終わり"></section>
+<section class="page photo"><img src="assets/01_place.jpg?v=5" alt="喫茶店の入口"></section>
+<section class="page photo edge"><img src="assets/02_street.jpg?v=5" alt="午後の街"></section>
+<section class="page photo"><img src="assets/03_light.jpg?v=5" alt="テーブルに落ちる午後の光"><div class="quote">光が動くまで、そこにいた。</div></section>
+<section class="page photo"><img src="assets/04_back.jpg?v=5" alt="窓を向く後ろ姿"></section>
+<section class="page photo"><img src="assets/07_pause.jpg?v=5" alt="テーブルに伏せる姿"></section>
+<section class="page photo"><img src="assets/06_window.jpg?v=5" alt="アーチ窓の横顔"></section>
+<section class="page photo"><img src="assets/09_end.jpg?v=5" alt="午後の終わり"></section>
 <section class="page ending"><div class="line"></div><h2>ある日の午後</h2><p>OTSUHIRO MONE × EMU</p><button class="again" id="again">もう一度見る</button></section>
 <div class="tapzone prev" id="prev"></div><div class="tapzone next" id="next"></div><div class="counter" id="counter">COVER</div>
 </div>
 <script>
 const pages=[...document.querySelectorAll('.page')],counter=document.getElementById('counter');let i=0;
-function show(n){i=Math.max(0,Math.min(n,pages.length-1));pages.forEach((p,j)=>p.classList.toggle('active',j===i));counter.textContent=i===0?'COVER':i===pages.length-1?'END':String(i).padStart(2,'0')+' / 09'}
+function show(n){i=Math.max(0,Math.min(n,pages.length-1));pages.forEach((p,j)=>p.classList.toggle('active',j===i));counter.textContent=i===0?'COVER':i===pages.length-1?'END':String(i).padStart(2,'0')+' / 07'}
 const next=()=>i<pages.length-1&&show(i+1),prev=()=>i>0&&show(i-1);
 document.getElementById('next').onclick=next;document.getElementById('prev').onclick=prev;document.getElementById('again').onclick=e=>{e.stopPropagation();show(0)};
 let sx=0,sy=0;document.addEventListener('touchstart',e=>{const t=e.changedTouches[0];sx=t.clientX;sy=t.clientY},{passive:false});document.addEventListener('touchmove',e=>e.preventDefault(),{passive:false});document.addEventListener('touchend',e=>{const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy))dx<0?next():prev()},{passive:false});
